@@ -23,6 +23,8 @@ export default {
   left: 0;
   top: 0;
   display: flex;
+  position: fixed;
+  z-index: 1000;
   box-shadow:0px 10px 8px -14px #1f1f1f;
 }
 .username {
@@ -33,10 +35,7 @@ export default {
     font-size: 30px;
 }
 .navTitle {
-    /* width: 50%; */
-    height: 60px;
     background-color: royalblue;
-    /* flex: 1; */
-    /* text-align: right; */
+    align-self: center;
 }
 </style>

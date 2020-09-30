@@ -1,11 +1,11 @@
 <template>
   <div class="navigationBarCss">
       <div class="username">
-          xxx
+          Mark Miao - 简历
       </div>
-      <div class="navTitle">
+      <!-- <div class="navTitle">
           ffff
-      </div>
+      </div> -->
   </div>
 </template>
 
@@ -30,8 +30,10 @@ export default {
 .username {
     /* background-color: red; */
     /* line-height: 60px; */
+    font-size: 30px;
+    font-weight: bolder;
     align-self: center;
-    padding-left: 100px;
+    padding-left: 20%;
     font-size: 30px;
 }
 .navTitle {

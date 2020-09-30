@@ -1,35 +1,35 @@
 <template>
-  <div class="AppItemLeft">
+  <div class="AppItemRight">
       <Layout>
-        <Sider class="leftsider" hide-trigger :width="screenWidth*0.5">
-          <div class="appimage">
-            <img class="imagecss" :src="appItemLeftDict.image" alt="">
-          </div>
-        </Sider>
         <Layout>
-            <Header class="header">
-              <img class="appicon" :src="appItemLeftDict.appIcon" alt="">
-              <div class="appTitle">
+            <Header class="rightheader">
+              <img class="rightappicon" :src="appItemLeftDict.appIcon" alt="">
+              <div class="rightappTitle">
                 {{appItemLeftDict.appTitle}}
               </div>
             </Header>
-            <Content class="content">
-              <div class="appInfo">
+            <Content class="rightcontent">
+              <div class="rightappInfo">
                 {{appItemLeftDict.appInfo}}
               </div>
             </Content>
-            <Footer class="footer">
-              <img class="appDown" :src="appItemLeftDict.appDownload" alt="">
+            <Footer class="rightfooter">
+              <img class="rightappDown" :src="appItemLeftDict.appDownload" alt="">
 
             </Footer>
         </Layout>
+        <Sider class="rightsider" hide-trigger :width="screenWidth*0.5">
+          <div class="rightappimage">
+            <img class="rightimagecss" :src="appItemLeftDict.image" alt="">
+          </div>
+        </Sider>
     </Layout>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AppItemLeft',
+  name: 'AppItemRight',
   props: {
     appItemLeftDict: {
       type: Object,
@@ -58,48 +58,50 @@ export default {
 </script>
 
 <style scoped>
-.AppItemLeft {
+.AppItemRight {
   margin-top: 80px;
   width: 100%;
   height: 300px;
-  background-color: lightgray;
+  background-color: #f7f7f7;
   left: 0;
   top: 0;
   display: flex;
   /* box-shadow:0px 10px 8px -14px #1f1f1f; */
 }
-.leftsider {
-  background-color: white;
+
+.rightsider {
+  background-color: #f7f7f7;
 }
-.appimage {
+.rightappimage {
   display: flex;
-  align-self: center;
+  /* align-self: center; */
   /* margin-right: 70px; */
-  margin-left:30%;
+  /* margin-left:auto; */
   width: 350px;
   height: 100%;
-  /* background-color: white; */
+  /* background-color: red; */
   /* height: 400px; */
 }
-.imagecss {
+.rightimagecss {
   align-self: center;
   margin-top: auto;
   margin-bottom: auto;
   width: 100%;
 }
-.header {
+.rightheader {
   padding-top: 20px;
   padding-left: 0;
-  background-color: white;
+  background-color: #f7f7f7;
   height: 40%;
   display: flex;
 }
-.appicon {
+.rightappicon {
+    margin-left: 30%;
   margin-top: auto;
   margin-bottom: auto;
   height: 50%;
 }
-.appTitle {
+.rightappTitle {
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 20px;
@@ -108,24 +110,26 @@ export default {
   line-height: 30px;
   font-weight: bolder;
 }
-.content {
-  background-color: white;
+.rightcontent {
+  background-color: #f7f7f7;
   height: 20%;
   display: flex;
 }
-.appInfo {
+.rightappInfo {
+    margin-left: 30%;
   font-size: 20px;
   line-height: 25px;
   width: 80%;
   margin-top: auto;
   margin-bottom: auto;
 }
-.footer {
+.rightfooter {
+    margin-left: 30%;
   padding-left: 0;
-  background-color: white;
+  background-color: #f7f7f7;
   height: 40%;
 }
-.appDown {
+.rightappDown {
   height: 60%;
 }
 </style>

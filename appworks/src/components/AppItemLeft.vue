@@ -61,14 +61,12 @@ export default {
 
 <style scoped>
 .AppItemLeft {
-  /* margin-top: 80px; */
   width: 100%;
-  height: 300px;
-  background-color: lightgray;
+  height: 350px;
+  background-color: white;
   left: 0;
   top: 0;
   display: flex;
-  /* box-shadow:0px 10px 8px -14px #1f1f1f; */
 }
 .leftsider {
   background-color: white;
@@ -76,18 +74,17 @@ export default {
 .appimage {
   display: flex;
   align-self: center;
-  margin-right: 70px;
-  margin-left:30%;
-  width: 400px;
+  margin-left:25%;
   height: 100%;
-  /* background-color: white; */
-  /* height: 400px; */
+  background-color: white;
 }
 .imagecss {
+  margin-left: auto;
+  margin-right: auto;
   align-self: center;
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 100%;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px #888888;
 }
 .header {
   padding-top: 20px;
@@ -97,6 +94,7 @@ export default {
   display: flex;
 }
 .appicon {
+  margin-left: 10%;
   margin-top: auto;
   margin-bottom: auto;
   height: 50%;
@@ -116,6 +114,7 @@ export default {
   display: flex;
 }
 .appInfo {
+  margin-left: 10%;
   font-size: 20px;
   line-height: 25px;
   width: 80%;
@@ -128,7 +127,8 @@ export default {
   height: 40%;
 }
 .appDown {
-  height: 60%;
+  margin-left: 10%;
+  height: 43px;
   cursor:pointer;
 }
 </style>

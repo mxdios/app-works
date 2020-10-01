@@ -14,11 +14,11 @@
               </div>
             </Content>
             <Footer class="rightfooter">
-              <img class="rightappDown" :src="appItemLeftDict.appDownload" alt="">
+              <img class="rightappDown" :src="appItemLeftDict.appDownload" alt="" @click="downClick">
 
             </Footer>
         </Layout>
-        <Sider class="rightsider" hide-trigger :width="screenWidth*0.5">
+        <Sider class="rightsider" hide-trigger :width="rightScreenWidth*0.5">
           <div class="rightappimage">
             <img class="rightimagecss" :src="appItemLeftDict.image" alt="">
           </div>
@@ -40,18 +40,21 @@ export default {
   },
   data () {
     return {
-      screenWidth: 0
+      rightScreenWidth: 0
     }
   },
   created () {
-    this.screenWidth = document.body.clientWidth
+    this.rightScreenWidth = document.body.clientWidth
   },
   mounted () {
     const that = this
-    window.onresize = () => {
-      return (() => {
-        that.screenWidth = document.body.clientWidth
-      })()
+    window.addEventListener('resize', function () {
+      that.screenWidth = document.body.clientWidth
+    })
+  },
+  methods: {
+    downClick () {
+      window.open(this.appItemLeftDict.downurl, '_blank')
     }
   }
 }
@@ -59,7 +62,6 @@ export default {
 
 <style scoped>
 .AppItemRight {
-  margin-top: 80px;
   width: 100%;
   height: 300px;
   background-color: #f7f7f7;
@@ -77,7 +79,7 @@ export default {
   /* align-self: center; */
   /* margin-right: 70px; */
   /* margin-left:auto; */
-  width: 350px;
+  width: 400px;
   height: 100%;
   /* background-color: red; */
   /* height: 400px; */
@@ -96,7 +98,7 @@ export default {
   display: flex;
 }
 .rightappicon {
-    margin-left: 30%;
+  margin-left: 30%;
   margin-top: auto;
   margin-bottom: auto;
   height: 50%;
@@ -131,5 +133,6 @@ export default {
 }
 .rightappDown {
   height: 60%;
+  cursor:pointer;
 }
 </style>

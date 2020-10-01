@@ -19,8 +19,7 @@
               </div>
             </Content>
             <Footer class="footer">
-              <img class="appDown" :src="appItemLeftDict.appDownload" alt="">
-
+              <img class="appDown" :src="appItemLeftDict.appDownload" alt="" @click="downClick">
             </Footer>
         </Layout>
     </Layout>
@@ -48,10 +47,13 @@ export default {
   },
   mounted () {
     const that = this
-    window.onresize = () => {
-      return (() => {
-        that.screenWidth = document.body.clientWidth
-      })()
+    window.addEventListener('resize', function () {
+      that.screenWidth = document.body.clientWidth
+    })
+  },
+  methods: {
+    downClick () {
+      window.open(this.appItemLeftDict.downurl, '_blank')
     }
   }
 }
@@ -59,7 +61,7 @@ export default {
 
 <style scoped>
 .AppItemLeft {
-  margin-top: 80px;
+  /* margin-top: 80px; */
   width: 100%;
   height: 300px;
   background-color: lightgray;
@@ -74,9 +76,9 @@ export default {
 .appimage {
   display: flex;
   align-self: center;
-  /* margin-right: 70px; */
+  margin-right: 70px;
   margin-left:30%;
-  width: 350px;
+  width: 400px;
   height: 100%;
   /* background-color: white; */
   /* height: 400px; */
@@ -127,5 +129,6 @@ export default {
 }
 .appDown {
   height: 60%;
+  cursor:pointer;
 }
 </style>

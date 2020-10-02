@@ -63,9 +63,11 @@ export default {
     margin-bottom: 20px;
 }
 .infoFont {
+  text-align: justify;
   font-size: 20px;
 }
 .phoneInfoFont {
+  text-align: justify;
   font-size: 15px;
 }
 </style>

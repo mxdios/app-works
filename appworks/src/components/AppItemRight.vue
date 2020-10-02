@@ -185,9 +185,12 @@ export default {
   line-height: 40px;
 }
 .phoneappInfo {
+  width: 80%;
+  margin-left: 10%;
   text-align: center;
   font-size: 15px;
-  line-height: 40px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .phoneappDown {
   display: flex;

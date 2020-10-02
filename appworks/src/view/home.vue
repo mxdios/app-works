@@ -84,9 +84,9 @@ export default {
     this.userInfoDict = {
       title: '简介',
       array: [
-        '90后，坐标北京，全职码农。职于创业公司，前端leader，立志成为“全干工程师”',
-        '具备多年iOS/macOS开发经验，写过几款独立app。前Objective-C骨灰级菜鸟，现Swift忠实拥趸。写过几款小程序，Vue懂一点，用uni-app写过跨平台应用，Flutter爱好者。',
-        '被誉为比产品更懂产品的码农，QA最爱沟通的程序猿。'
+        'MiaoXiaodong - 男，90后，居住北京，全职码农。目前职于创业公司，前端Leader，立志成为“全干工程师”',
+        '具备多年iOS开发经验，所有应用皆为独立开发。曾独立设计、开发过几款个人iOS/macOS应用。写过微信/支付宝小程序、跨平台应用、网站/系统前端。',
+        '前Objective-C骨灰级菜鸟，现Swift忠实拥趸。熟悉iOS/macOS开发，熟悉小程序，了解Vue，正在学习Flutter。'
       ]
     }
     this.mremind = {
@@ -117,7 +117,7 @@ export default {
       image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201001-103736%402x.png',
       appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/insposicon.png',
       appTitle: 'INSPOS',
-      appInfo: '收银设备的智能管家',
+      appInfo: '收银设备的智能管家应用',
       appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/macappstoreimage.png',
       downurl: 'https://apps.apple.com/cn/app/inspos/id1472816651'
     }
@@ -141,7 +141,7 @@ export default {
       image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201001-111531%402x.png',
       appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/1024x1024bb.png',
       appTitle: 'INSPOS 闪票',
-      appInfo: '管理意锐小白盒的智能助手',
+      appInfo: '管理意锐小白盒的智能助手应用',
       appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/macappstoreimage.png',
       downurl: 'https://apps.apple.com/cn/app/id1255453461'
     }
@@ -149,7 +149,7 @@ export default {
       image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201001-112335%402x.png',
       appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201001-112410%402x.png',
       appTitle: '海报大师专业版',
-      appInfo: '宣传海报制作神器',
+      appInfo: '宣传海报制作工具',
       appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/macappstoreimage.png',
       downurl: 'https://apps.apple.com/cn/app/id1247401981'
     }
@@ -173,7 +173,7 @@ export default {
       image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201001-234957%402x.png',
       appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201001-235053%402x.png',
       appTitle: '周易宝宝起名大师专业版',
-      appInfo: '宝宝起名、测名实用工具',
+      appInfo: '起名、测名实用工具',
       appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/macappstoreimage.png',
       downurl: 'https://apps.apple.com/cn/app/id1501997083'
     }
@@ -197,23 +197,23 @@ export default {
       image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201002-000920%402x.png',
       appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201002-000843%402x.png',
       appTitle: 'Lations',
-      appInfo: 'Lations智能中控系统（iPad App）',
+      appInfo: 'Lations智能中控系统（仅支持iPad）',
       appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/macappstoreimage.png',
       downurl: 'https://apps.apple.com/cn/app/id1257364252'
     }
     this.recordArray = [
       {
         time: '2015年10月～至今',
-        company: 'INSPIRY 基础研发部 前端组leader',
-        works: ['前端/移动端负责人', 'iOS应用/SDK开发', '小程序开发']
+        company: 'INSPIRY 基础研发部 前端组Leader',
+        works: ['前端/移动端技术负责人', 'iOS应用/SDK开发', '前端/小程序开发']
       },
       {
-        time: '2015年3月～2015年10月',
+        time: '2015年6月～2015年10月',
         company: '六行普惠 研发部 iOS工程师',
-        works: ['移动端负责人', 'iOS应用开发']
+        works: ['移动端技术负责人', 'iOS应用开发']
       },
       {
-        time: '2014年3月～2015年3月',
+        time: '2014年3月～2015年6月',
         company: '待着网 研发部 iOS工程师',
         works: ['iOS应用开发']
       }

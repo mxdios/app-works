@@ -23,9 +23,9 @@ export default {
 
 <style scoped>
 .footerview {
-    padding-top: 100px;
     width: 100%;
-    height: 150px;
+    line-height: 60px;
+    height: 60px;
     background-color: #f7f7f7;
     text-align: center;
 }

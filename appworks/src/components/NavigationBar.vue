@@ -2,7 +2,7 @@
   <div>
     <div class="navigationBarCss">
       <div :class="screenWidth>1000 ? 'username':'phoneusername'">
-          简历 - Mark Miao
+          MiaoXiaodong
       </div>
       <div v-if="screenWidth>1000" class="navTitle">
           <div class="titlebtncss" v-for="(item, index) in titleBtns" :key="index" @click="titleBtnClick(index)">

@@ -1,5 +1,13 @@
 # app-works
 
+
+
+部署命令：`bash deploy.sh`
+
+
+
+---
+
 ## app:
 
 INSPOS

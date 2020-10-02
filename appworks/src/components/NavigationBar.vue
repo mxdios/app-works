@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="navigationBarCss">
-      <div class="username">
-          Mark Miao
+      <div :class="screenWidth>1000 ? 'username':'phoneusername'">
+          简历 - Mark Miao
       </div>
       <div v-if="screenWidth>1000" class="navTitle">
           <div class="titlebtncss" v-for="(item, index) in titleBtns" :key="index" @click="titleBtnClick(index)">
@@ -11,7 +11,7 @@
       </div>
       <div v-else class="navTitle">
         <div class="titlebtncss" @click="enumShow">
-          <Icon :type="isShow ? 'md-close':'md-menu'" size=40 />
+          <Icon :type="isShow ? 'md-close':'md-menu'" size=30 />
         </div>
       </div>
     </div>
@@ -73,7 +73,12 @@ export default {
     font-weight: bolder;
     line-height: 60px;
     margin-left: 15%;
-    font-size: 30px;
+}
+.phoneusername {
+    font-size: 20px;
+    font-weight: bolder;
+    line-height: 60px;
+    margin-left: 15%;
 }
 .navTitle {
     display: flex;

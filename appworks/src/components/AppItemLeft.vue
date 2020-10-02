@@ -107,6 +107,7 @@ export default {
   margin-top: auto;
   margin-bottom: auto;
   width: 60px;
+  height: 60px;
 }
 .appTitle {
   margin-top: auto;
@@ -165,6 +166,7 @@ export default {
 .phoneappicon {
   margin-left: auto;
   width: 40px;
+  height: 40px;
 }
 .phoneappTitle {
   font-size: 20px;

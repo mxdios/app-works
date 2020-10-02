@@ -1,5 +1,5 @@
 <template>
-  <div class="groupHeader bottomline" :class="type == 0 ? 'bottomlinew': 'bottomlineg'">
+  <div class="groupHeader">
       <div class="header">
           {{headerTitle}}
       </div>
@@ -10,8 +10,7 @@
 export default {
   name: 'GroupHeader',
   props: {
-    headerTitle: '',
-    type: 0
+    headerTitle: ''
   },
   data () {
     return {
@@ -31,23 +30,14 @@ export default {
 .groupHeader {
     width: 100%;
     height: 60px;
+    background-color: #0395EB;
 }
-.bottomlinew {
-  background-color: white;
-  border-bottom-style: solid;
-  border-width: 1px;
-  border-color: lightgrey;
-}
-.bottomlineg {
-  background-color: #f7f7f7;
-  border-bottom-style: solid;
-  border-width: 1px;
-  border-color: lightgrey;
-}
+
 .header {
+  color: white;
   font-size: 30px;
-    font-weight: bolder;
-    margin-left: 15%;
-    line-height: 60px;
+  font-weight: bolder;
+  margin-left: 15%;
+  line-height: 60px;
 }
 </style>

@@ -1,17 +1,37 @@
 <template>
   <div class="navigationBarCss">
       <div class="username">
-          Mark Miao - 简历
+          Mark Miao
       </div>
-      <!-- <div class="navTitle">
-          ffff
-      </div> -->
+      <div class="navTitle">
+          <div class="titlebtncss" v-for="(item, index) in titleBtns" :key="index" @click="titleBtnClick(index)">
+              {{item}}
+          </div>
+      </div>
   </div>
 </template>
 
 <script>
 export default {
-
+  name: 'ContactItem',
+  props: {
+    titleBtns: {
+      type: Array,
+      default () {
+        return []
+      }
+    }
+  },
+  methods: {
+    titleBtnClick (index) {
+      console.log(index)
+      var PageId = document.querySelector('#page' + index)
+      window.scrollTo({
+        'top': PageId.offsetTop - 60,
+        'behavior': 'smooth'
+      })
+    }
+  }
 }
 </script>
 
@@ -28,16 +48,24 @@ export default {
   box-shadow:0px 10px 8px -14px #1f1f1f;
 }
 .username {
-    /* background-color: red; */
-    /* line-height: 60px; */
     font-size: 30px;
     font-weight: bolder;
     align-self: center;
-    padding-left: 20%;
+    margin-left: 15%;
     font-size: 30px;
 }
 .navTitle {
-    background-color: royalblue;
+    display: flex;
+    margin-right: 15%;
+    margin-left: auto;
+    height: 60px;
     align-self: center;
+}
+.titlebtncss {
+    cursor:pointer;
+    align-self: center;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 10px;
 }
 </style>

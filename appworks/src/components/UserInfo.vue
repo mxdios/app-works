@@ -36,20 +36,24 @@ export default {
 
 <style scoped>
 .userInfo {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
     padding-bottom: 40px;
 }
 .header {
+    /* padding-left: 15%; */
+    line-height: 60px;
+    height: 60px;
     margin-top: 100px;
     margin-bottom: 30px;
-    font-size: 35px;
+    padding-left: 15%;
+    font-size: 30px;
     font-weight: bolder;
-    /* background-color: green; */
+    color: #0395EB;
 }
 .info {
     /* background-color: green; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
     font-size: 20px;
     margin-bottom: 20px;
 }

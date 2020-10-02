@@ -1,25 +1,30 @@
 
 <template>
   <div>
-    <navBar />
-    <userInfo :userInfoDict="userInfoDict" />
-    <groupHeader :headerTitle="headerTitle1"  :type="1" />
+    <navBar :titleBtns="titleBtns" />
+    <userInfo id="page0" :userInfoDict="userInfoDict" />
+    <groupHeader id="page1" :headerTitle="headerTitle1"/>
     <appItemRight :appItemLeftDict="mremind" />
     <appItemLeft :appItemLeftDict="worktime" />
     <appItemRight :appItemLeftDict="stenonote" />
-    <groupHeader :headerTitle="headerTitle2"  :type="0" />
+    <groupHeader id="page2" :headerTitle="headerTitle2"/>
     <appItemLeft :appItemLeftDict="insposapp" />
     <appItemRight :appItemLeftDict="inscounter" />
     <appItemLeft :appItemLeftDict="paipaiaudit" />
     <appItemRight :appItemLeftDict="insposticket" />
     <appItemLeft :appItemLeftDict="haibao" />
-    <groupHeader :headerTitle="headerTitle3"  :type="1" />
+    <groupHeader id="page3" :headerTitle="headerTitle3"/>
     <appItemRight :appItemLeftDict="dadamap" />
     <appItemLeft :appItemLeftDict="watermark" />
     <appItemRight :appItemLeftDict="baobaoname" />
     <appItemLeft :appItemLeftDict="koudaie" />
     <appItemRight :appItemLeftDict="yinxin" />
     <appItemLeft :appItemLeftDict="lations" />
+    <groupHeader id="page4" :headerTitle="headerTitle4"/>
+    <recordItem :infoDict="recordArray" />
+    <groupHeader id="page5" :headerTitle="headerTitle5"/>
+    <contactItem :infoDict="contactArray"/>
+    <footerView />
   </div>
 </template>
 :selectAfterId="afterSaleSelectId"
@@ -30,6 +35,9 @@ import appItemLeft from '@/components/AppItemLeft'
 import appItemRight from '@/components/AppItemRight'
 import userInfo from '@/components/UserInfo'
 import groupHeader from '@/components/GroupHeader'
+import recordItem from '@/components/RecordItem'
+import contactItem from '@/components/ContactItem'
+import footerView from '@/components/FooterView'
 
 export default {
   name: 'home',
@@ -38,14 +46,20 @@ export default {
     appItemLeft,
     appItemRight,
     userInfo,
-    groupHeader
+    groupHeader,
+    recordItem,
+    contactItem,
+    footerView
   },
   data () {
     return {
+      titleBtns: ['简介', '独立', '公司', '合作', '经历', '联系'],
       userInfoDict: {},
-      headerTitle1: '独立开发者作品',
-      headerTitle2: '公司应用',
-      headerTitle3: '合作项目作品',
+      headerTitle1: '独立作品',
+      headerTitle2: '公司产品',
+      headerTitle3: '合作项目',
+      headerTitle4: '职业经历',
+      headerTitle5: '联系方式',
       mremind: {},
       worktime: {},
       stenonote: {},
@@ -59,7 +73,9 @@ export default {
       baobaoname: {},
       koudaie: {},
       yinxin: {},
-      lations: {}
+      lations: {},
+      recordArray: [],
+      contactArray: []
     }
   },
   created () {
@@ -72,10 +88,8 @@ export default {
       ]
     }
     this.mremind = {
-      image:
-        'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/mremindappstore.png',
-      appIcon:
-        'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/mremindicon.png',
+      image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/mremindappstore.png',
+      appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/mremindicon.png',
       appTitle: 'mRemind - 提醒你每一件小事',
       appInfo: '专为 macOS 设计的待办提醒应用',
       appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/badge-download-on-the-mac-app-store_s.png',
@@ -185,6 +199,47 @@ export default {
       appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/macappstoreimage.png',
       downurl: 'https://apps.apple.com/cn/app/id1257364252'
     }
+    this.recordArray = [
+      {
+        time: '2015年10月～至今',
+        company: 'INSPIRY 基础研发部 前端组leader',
+        works: ['前端/移动端负责人', 'iOS应用/SDK开发', '小程序开发']
+      },
+      {
+        time: '2015年3月～2015年10月',
+        company: '六行普惠 研发部 iOS工程师',
+        works: ['移动端负责人', 'iOS应用开发']
+      },
+      {
+        time: '2014年3月～2015年3月',
+        company: '待着网 研发部 iOS工程师',
+        works: ['iOS应用开发']
+      }
+    ]
+    this.contactArray = [
+      {
+        icon: 'md-mail',
+        text: 'i#markmiao.com（#替换为@）'
+      },
+      {
+        icon: 'md-mail',
+        text: 'mxd187#gmail.com（#替换为@）'
+      },
+      {
+        icon: 'logo-github',
+        text: 'GitHub@mxdios',
+        url: 'https://github.com/mxdios'
+      },
+      {
+        icon: 'ios-globe',
+        text: '个人博客@MarkMiao',
+        url: 'https://markmiao.com/'
+      },
+      {
+        icon: 'ios-home',
+        text: '北京市昌平区'
+      }
+    ]
   }
 }
 </script>

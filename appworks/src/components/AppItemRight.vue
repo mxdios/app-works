@@ -1,5 +1,5 @@
 <template>
-  <div class="AppItemRight">
+  <div v-if="rightScreenWidth>1000" class="AppItemRight">
       <Layout>
         <Layout>
             <Header class="rightheader">
@@ -23,6 +23,19 @@
           </div>
         </Sider>
     </Layout>
+  </div>
+  <div v-else class="phonebgview">
+    <img class="phoneimagecss" :src="appItemLeftDict.image" alt="">
+    <div class="phonetitlebg">
+      <img class="phoneappicon" :src="appItemLeftDict.appIcon" alt="">
+      <div class="phoneappTitle">
+        {{appItemLeftDict.appTitle}}
+      </div>
+    </div>
+    <div class="phoneappInfo">
+      {{appItemLeftDict.appInfo}}
+    </div>
+    <img class="phoneappDown" :src="appItemLeftDict.appDownload" alt="" @click="downClick">
   </div>
 </template>
 
@@ -62,7 +75,6 @@ export default {
 <style scoped>
 .AppItemRight {
   width: 100%;
-  height: 350px;
   background-color: #f7f7f7;
   left: 0;
   top: 0;
@@ -70,6 +82,8 @@ export default {
 }
 
 .rightsider {
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #f7f7f7;
 }
 .rightappimage {
@@ -100,7 +114,7 @@ export default {
     margin-left: auto;
   margin-top: auto;
   margin-bottom: auto;
-  height: 50%;
+  width: 60px;
 }
 .rightappTitle {
     text-align: right;
@@ -137,5 +151,54 @@ export default {
 .rightappDown {
     height: 43px;
   cursor:pointer;
+}
+
+/* 手机 */
+.phonebgview {
+  width: 100%;
+  background-color: #f7f7f7;
+  left: 0;
+  top: 0;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.phoneimagecss {
+  max-width: 400px;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px #888888;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+.phonetitlebg {
+  display: flex;
+}
+.phoneappicon {
+  margin-left: auto;
+  width: 40px;
+}
+.phoneappTitle {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bolder;
+  margin-right: auto;
+  margin-left: 10px;
+  line-height: 40px;
+}
+.phoneappInfo {
+  text-align: center;
+  font-size: 15px;
+  line-height: 40px;
+}
+.phoneappDown {
+  display: flex;
+  text-align: center;
+  height: 33px;
+  cursor:pointer;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 }
 </style>

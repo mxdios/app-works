@@ -1,5 +1,5 @@
 <template>
-  <div class="AppItemLeft">
+  <div v-if="screenWidth>1000" class="AppItemLeft">
       <Layout>
         <Sider class="leftsider" hide-trigger :width="screenWidth*0.5">
           <div class="appimage">
@@ -23,6 +23,19 @@
             </Footer>
         </Layout>
     </Layout>
+  </div>
+  <div v-else class="phonebgview">
+    <img class="phoneimagecss" :src="appItemLeftDict.image" alt="">
+    <div class="phonetitlebg">
+      <img class="phoneappicon" :src="appItemLeftDict.appIcon" alt="">
+      <div class="phoneappTitle">
+        {{appItemLeftDict.appTitle}}
+      </div>
+    </div>
+    <div class="phoneappInfo">
+      {{appItemLeftDict.appInfo}}
+    </div>
+    <img class="phoneappDown" :src="appItemLeftDict.appDownload" alt="" @click="downClick">
   </div>
 </template>
 
@@ -49,6 +62,7 @@ export default {
     const that = this
     window.addEventListener('resize', function () {
       that.screenWidth = document.body.clientWidth
+      console.log(that.screenWidth)
     })
   },
   methods: {
@@ -62,13 +76,14 @@ export default {
 <style scoped>
 .AppItemLeft {
   width: 100%;
-  height: 350px;
   background-color: white;
   left: 0;
   top: 0;
   display: flex;
 }
 .leftsider {
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: white;
 }
 .appimage {
@@ -97,14 +112,13 @@ export default {
   margin-left: 10%;
   margin-top: auto;
   margin-bottom: auto;
-  height: 50%;
+  width: 60px;
 }
 .appTitle {
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 20px;
   font-size: 25px;
-  /* background-color: violet; */
   line-height: 30px;
   font-weight: bolder;
 }
@@ -130,5 +144,54 @@ export default {
   margin-left: 10%;
   height: 43px;
   cursor:pointer;
+}
+
+/* 手机 */
+.phonebgview {
+  width: 100%;
+  background-color: white;
+  left: 0;
+  top: 0;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.phoneimagecss {
+  max-width: 400px;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px #888888;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+.phonetitlebg {
+  display: flex;
+}
+.phoneappicon {
+  margin-left: auto;
+  width: 40px;
+}
+.phoneappTitle {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bolder;
+  margin-right: auto;
+  margin-left: 10px;
+  line-height: 40px;
+}
+.phoneappInfo {
+  text-align: center;
+  font-size: 15px;
+  line-height: 40px;
+}
+.phoneappDown {
+  display: flex;
+  text-align: center;
+  height: 33px;
+  cursor:pointer;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="rightScreenWidth>1000" class="AppItemRight">
+  <div v-if="screenWidth>1000" class="AppItemRight">
       <Layout>
         <Layout>
             <Header class="rightheader">
@@ -17,7 +17,7 @@
               <img class="rightappDown" :src="appItemLeftDict.appDownload" alt="" @click="downClick">
             </Footer>
         </Layout>
-        <Sider class="rightsider" hide-trigger :width="rightScreenWidth*0.5">
+        <Sider class="rightsider" hide-trigger :width="screenWidth*0.5">
           <div class="rightappimage">
             <img class="rightimagecss" :src="appItemLeftDict.image" alt="">
           </div>
@@ -43,6 +43,7 @@
 export default {
   name: 'AppItemRight',
   props: {
+    screenWidth: 0,
     appItemLeftDict: {
       type: Object,
       default () {
@@ -52,17 +53,11 @@ export default {
   },
   data () {
     return {
-      rightScreenWidth: 0
     }
   },
   created () {
-    this.rightScreenWidth = document.body.clientWidth
   },
   mounted () {
-    const that = this
-    window.addEventListener('resize', function () {
-      that.rightScreenWidth = document.body.clientWidth
-    })
   },
   methods: {
     downClick () {
@@ -163,7 +158,7 @@ export default {
   padding-bottom: 20px;
 }
 .phoneimagecss {
-  max-width: 400px;
+  max-width: 300px;
   width: 80%;
   border-radius: 10px;
   box-shadow: 3px 3px 10px #888888;

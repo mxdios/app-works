@@ -1,9 +1,9 @@
 <template>
   <div class="userInfo">
-      <div class="header">
+      <div class="header" :class="screenWidth>1000 ? 'headerFont' : 'phoneHeaderFont'">
           {{userInfoDict.title}}
       </div>
-      <div class="info" v-for="(item, index) in userInfoDict.array" :key="index">
+      <div class="info" :class="screenWidth>1000 ? 'infoFont' : 'phoneInfoFont'" v-for="(item, index) in userInfoDict.array" :key="index">
           {{item}}
       </div>
   </div>
@@ -13,6 +13,7 @@
 export default {
   name: 'UserInfo',
   props: {
+    screenWidth: 0,
     userInfoDict: {
       type: Object,
       default () {
@@ -45,16 +46,26 @@ export default {
     margin-top: 100px;
     margin-bottom: 30px;
     padding-left: 15%;
-    font-size: 30px;
     font-weight: bolder;
     color: #0395EB;
+}
+.headerFont {
+  font-size: 30px;
+}
+.phoneHeaderFont {
+  font-size: 25px;
 }
 .info {
     /* background-color: green; */
     margin-left: auto;
     margin-right: auto;
     width: 70%;
-    font-size: 20px;
     margin-bottom: 20px;
+}
+.infoFont {
+  font-size: 20px;
+}
+.phoneInfoFont {
+  font-size: 15px;
 }
 </style>

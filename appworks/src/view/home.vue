@@ -1,29 +1,29 @@
 
 <template>
   <div>
-    <navBar :titleBtns="titleBtns" />
-    <userInfo id="page0" :userInfoDict="userInfoDict" />
-    <groupHeader id="page1" :headerTitle="headerTitle1"/>
-    <appItemRight :appItemLeftDict="mremind" />
-    <appItemLeft :appItemLeftDict="worktime" />
-    <appItemRight :appItemLeftDict="stenonote" />
-    <groupHeader id="page2" :headerTitle="headerTitle2"/>
-    <appItemLeft :appItemLeftDict="insposapp" />
-    <appItemRight :appItemLeftDict="inscounter" />
-    <appItemLeft :appItemLeftDict="paipaiaudit" />
-    <appItemRight :appItemLeftDict="insposticket" />
-    <appItemLeft :appItemLeftDict="haibao" />
-    <groupHeader id="page3" :headerTitle="headerTitle3"/>
-    <appItemRight :appItemLeftDict="dadamap" />
-    <appItemLeft :appItemLeftDict="watermark" />
-    <appItemRight :appItemLeftDict="baobaoname" />
-    <appItemLeft :appItemLeftDict="koudaie" />
-    <appItemRight :appItemLeftDict="yinxin" />
-    <appItemLeft :appItemLeftDict="lations" />
-    <groupHeader id="page4" :headerTitle="headerTitle4"/>
-    <recordItem :infoDict="recordArray" />
-    <groupHeader id="page5" :headerTitle="headerTitle5"/>
-    <contactItem :infoDict="contactArray"/>
+    <navBar :titleBtns="titleBtns" :screenWidth="screenWidth" />
+    <userInfo id="page0" :userInfoDict="userInfoDict" :screenWidth="screenWidth" />
+    <groupHeader id="page1" :headerTitle="headerTitle1" :screenWidth="screenWidth" />
+    <appItemRight :appItemLeftDict="mremind" :screenWidth="screenWidth" />
+    <appItemLeft :appItemLeftDict="worktime" :screenWidth="screenWidth" />
+    <appItemRight :appItemLeftDict="stenonote" :screenWidth="screenWidth" />
+    <groupHeader id="page2" :headerTitle="headerTitle2" :screenWidth="screenWidth" />
+    <appItemLeft :appItemLeftDict="insposapp" :screenWidth="screenWidth" />
+    <appItemRight :appItemLeftDict="inscounter" :screenWidth="screenWidth" />
+    <appItemLeft :appItemLeftDict="paipaiaudit" :screenWidth="screenWidth" />
+    <appItemRight :appItemLeftDict="insposticket" :screenWidth="screenWidth" />
+    <appItemLeft :appItemLeftDict="haibao" :screenWidth="screenWidth" />
+    <groupHeader id="page3" :headerTitle="headerTitle3" :screenWidth="screenWidth" />
+    <appItemRight :appItemLeftDict="dadamap" :screenWidth="screenWidth" />
+    <appItemLeft :appItemLeftDict="watermark" :screenWidth="screenWidth" />
+    <appItemRight :appItemLeftDict="baobaoname" :screenWidth="screenWidth" />
+    <appItemLeft :appItemLeftDict="koudaie" :screenWidth="screenWidth" />
+    <appItemRight :appItemLeftDict="yinxin" :screenWidth="screenWidth" />
+    <appItemLeft :appItemLeftDict="lations" :screenWidth="screenWidth" />
+    <groupHeader id="page4" :headerTitle="headerTitle4" :screenWidth="screenWidth" />
+    <recordItem :infoDict="recordArray" :screenWidth="screenWidth" />
+    <groupHeader id="page5" :headerTitle="headerTitle5" :screenWidth="screenWidth" />
+    <contactItem :infoDict="contactArray" :screenWidth="screenWidth" />
     <footerView />
   </div>
 </template>
@@ -53,6 +53,7 @@ export default {
   },
   data () {
     return {
+      screenWidth: 0,
       titleBtns: ['简介', '独立', '公司', '合作', '经历', '联系'],
       userInfoDict: {},
       headerTitle1: '独立作品',
@@ -79,6 +80,7 @@ export default {
     }
   },
   created () {
+    this.screenWidth = document.body.clientWidth
     this.userInfoDict = {
       title: '简介',
       array: [
@@ -240,6 +242,12 @@ export default {
         text: '北京市昌平区'
       }
     ]
+  },
+  mounted () {
+    const that = this
+    window.addEventListener('resize', function () {
+      that.screenWidth = document.body.clientWidth
+    })
   }
 }
 </script>

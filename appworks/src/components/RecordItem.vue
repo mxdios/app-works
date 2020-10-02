@@ -1,13 +1,13 @@
 <template>
   <div class="userInfo" :class="screenWidth>1000 ? 'selfw': 'phoneselfw'">
       <div v-for="(item, index) in infoDict" :key="index">
-          <div class="timetitle">
+          <div :class="screenWidth>1000 ? 'timetitle':'phoneTimetitle'">
               {{item.time}}
           </div>
-          <div class="companytitle">
+          <div :class="screenWidth>1000 ? 'companytitle' : 'phoneCompanytitle'">
               {{item.company}}
           </div>
-          <li  class="worktitle" v-for="(sumItem, sumIndex) in item.works" :key="sumIndex">
+          <li  :class="screenWidth>1000 ? 'worktitle':'phoneWorktitle'" v-for="(sumItem, sumIndex) in item.works" :key="sumIndex">
               {{sumItem}}
           </li>
       </div>
@@ -18,6 +18,7 @@
 export default {
   name: 'RecordItem',
   props: {
+    screenWidth: 0,
     infoDict: {
       type: Array,
       default () {
@@ -27,18 +28,12 @@ export default {
   },
   data () {
     return {
-      screenWidth: 0
     }
   },
   created () {
 
   },
   mounted () {
-    const that = this
-    window.addEventListener('resize', function () {
-      that.screenWidth = document.body.clientWidth
-      console.log(that.screenWidth)
-    })
   },
   methods: {
   }
@@ -63,14 +58,27 @@ export default {
     font-size: 25px;
     font-weight: bolder;
 }
+.phoneTimetitle {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: bolder;
+}
 .companytitle {
     line-height: 40px;
-    /* margin-bottom: 20px; */
     font-size: 20px;
+}
+.phoneCompanytitle {
+    line-height: 30px;
+    font-size: 15px;
 }
 .worktitle {
     line-height: 30px;
     padding-left: 10px;
     font-size: 15px;
+}
+.phoneWorktitle {
+    line-height: 25px;
+    padding-left: 10px;
+    font-size: 10px;
 }
 </style>

@@ -1,13 +1,25 @@
 <template>
-  <div class="navigationBarCss">
+  <div>
+    <div class="navigationBarCss">
       <div class="username">
           Mark Miao
       </div>
-      <div class="navTitle">
+      <div v-if="screenWidth>1000" class="navTitle">
           <div class="titlebtncss" v-for="(item, index) in titleBtns" :key="index" @click="titleBtnClick(index)">
               {{item}}
           </div>
       </div>
+      <div v-else class="navTitle">
+        <div class="titlebtncss" @click="enumShow">
+          <Icon :type="isShow ? 'md-close':'md-menu'" size=40 />
+        </div>
+      </div>
+    </div>
+    <div v-if="isShow && screenWidth<1000" class="enumView">
+      <div class="enumItem" v-for="(item, index) in titleBtns" :key="index" @click="titleBtnClick(index)">
+        {{item}}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -15,6 +27,7 @@
 export default {
   name: 'ContactItem',
   props: {
+    screenWidth: 0,
     titleBtns: {
       type: Array,
       default () {
@@ -22,14 +35,22 @@ export default {
       }
     }
   },
+  data () {
+    return {
+      isShow: false
+    }
+  },
   methods: {
     titleBtnClick (index) {
-      console.log(index)
+      this.isShow = false
       var PageId = document.querySelector('#page' + index)
       window.scrollTo({
         'top': PageId.offsetTop - 60,
         'behavior': 'smooth'
       })
+    },
+    enumShow () {
+      this.isShow = !this.isShow
     }
   }
 }
@@ -50,7 +71,7 @@ export default {
 .username {
     font-size: 30px;
     font-weight: bolder;
-    align-self: center;
+    line-height: 60px;
     margin-left: 15%;
     font-size: 30px;
 }
@@ -59,7 +80,6 @@ export default {
     margin-right: 15%;
     margin-left: auto;
     height: 60px;
-    align-self: center;
 }
 .titlebtncss {
     cursor:pointer;
@@ -67,5 +87,24 @@ export default {
     font-size: 18px;
     font-weight: bolder;
     padding: 10px;
+}
+.enumView {
+  top: 60px;
+  position: fixed;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 240px;
+  box-shadow:0px 10px 8px -14px #1f1f1f;
+  background-color: white;
+}
+.enumItem {
+  font-size: 15px;
+  font-weight: bolder;
+  cursor:pointer;
+  width: 100%;
+  height: 40px;
+  padding-left: 15%;
+  line-height: 40px;
+  /* background-color: violet; */
 }
 </style>

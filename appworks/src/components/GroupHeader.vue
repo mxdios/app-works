@@ -1,6 +1,6 @@
 <template>
   <div class="groupHeader">
-      <div class="header">
+      <div class="header" :class="screenWidth>1000? 'headerFont': 'phoneHeaderFont'">
           {{headerTitle}}
       </div>
   </div>
@@ -10,6 +10,7 @@
 export default {
   name: 'GroupHeader',
   props: {
+    screenWidth: 0,
     headerTitle: ''
   },
   data () {
@@ -35,9 +36,14 @@ export default {
 
 .header {
   color: white;
-  font-size: 30px;
   font-weight: bolder;
   margin-left: 15%;
   line-height: 60px;
+}
+.headerFont {
+  font-size: 30px;
+}
+.phoneHeaderFont {
+  font-size: 25px;
 }
 </style>

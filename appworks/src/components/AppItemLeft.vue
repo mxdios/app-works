@@ -43,6 +43,7 @@
 export default {
   name: 'AppItemLeft',
   props: {
+    screenWidth: 0,
     appItemLeftDict: {
       type: Object,
       default () {
@@ -52,18 +53,11 @@ export default {
   },
   data () {
     return {
-      screenWidth: 0
     }
   },
   created () {
-    this.screenWidth = document.body.clientWidth
   },
   mounted () {
-    const that = this
-    window.addEventListener('resize', function () {
-      that.screenWidth = document.body.clientWidth
-      console.log(that.screenWidth)
-    })
   },
   methods: {
     downClick () {
@@ -156,7 +150,7 @@ export default {
   padding-bottom: 20px;
 }
 .phoneimagecss {
-  max-width: 400px;
+  max-width: 300px;
   width: 80%;
   border-radius: 10px;
   box-shadow: 3px 3px 10px #888888;

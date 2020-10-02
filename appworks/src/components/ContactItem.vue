@@ -1,11 +1,11 @@
 <template>
   <div class="userInfo" :class="screenWidth>1000 ? 'selfw': 'phoneselfw'">
       <div v-for="(item, index) in infoDict" :key="index">
-          <div class="timetitle" v-if="item.url">
+          <div :class="screenWidth>1000? 'timetitle':'phoneTimeTitle'" v-if="item.url">
               <Icon :type="item.icon" />
               <a class="urlcss" @click="clickFun(item.url)">{{item.text}}</a>
           </div>
-          <div class="timetitle" v-else>
+          <div :class="screenWidth>1000? 'timetitle':'phoneTimeTitle'" v-else>
               <Icon :type="item.icon" />
               {{item.text}}
           </div>
@@ -17,6 +17,7 @@
 export default {
   name: 'ContactItem',
   props: {
+    screenWidth: 0,
     infoDict: {
       type: Array,
       default () {
@@ -26,18 +27,12 @@ export default {
   },
   data () {
     return {
-      screenWidth: 0
     }
   },
   created () {
 
   },
   mounted () {
-    const that = this
-    window.addEventListener('resize', function () {
-      that.screenWidth = document.body.clientWidth
-      console.log(that.screenWidth)
-    })
   },
   methods: {
     clickFun (url) {
@@ -63,6 +58,10 @@ export default {
 .timetitle {
     margin-top: 10px;
     font-size: 20px;
+}
+.phoneTimeTitle {
+    margin-top: 10px;
+    font-size: 15px;
 }
 .urlcss {
     cursor:pointer;

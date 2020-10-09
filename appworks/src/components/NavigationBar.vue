@@ -98,7 +98,7 @@ export default {
   position: fixed;
   flex-flow: row wrap;
   width: 100%;
-  height: 240px;
+  height: 280px;
   box-shadow:0px 10px 8px -14px #1f1f1f;
   background-color: white;
 }

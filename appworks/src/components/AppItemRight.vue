@@ -106,11 +106,13 @@ export default {
   display: flex;
 }
 .rightappicon {
-    margin-left: auto;
+  margin-left: auto;
   margin-top: auto;
   margin-bottom: auto;
   width: 60px;
   height: 60px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px #888888;
 }
 .rightappTitle {
     text-align: right;
@@ -175,6 +177,8 @@ export default {
   margin-left: auto;
   width: 40px;
   height: 40px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px #888888;
 }
 .phoneappTitle {
   font-size: 20px;

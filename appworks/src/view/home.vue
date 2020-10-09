@@ -21,8 +21,10 @@
     <appItemRight :appItemLeftDict="yinxin" :screenWidth="screenWidth" />
     <appItemLeft :appItemLeftDict="lations" :screenWidth="screenWidth" />
     <groupHeader id="page4" :headerTitle="headerTitle4" :screenWidth="screenWidth" />
-    <recordItem :infoDict="recordArray" :screenWidth="screenWidth" />
+    <offlineView :appArray="offlineAppArray" :screenWidth="screenWidth" />
     <groupHeader id="page5" :headerTitle="headerTitle5" :screenWidth="screenWidth" />
+    <recordItem :infoDict="recordArray" :screenWidth="screenWidth" />
+    <groupHeader id="page6" :headerTitle="headerTitle6" :screenWidth="screenWidth" />
     <contactItem :infoDict="contactArray" :screenWidth="screenWidth" />
     <footerView />
   </div>
@@ -38,6 +40,7 @@ import groupHeader from '@/components/GroupHeader'
 import recordItem from '@/components/RecordItem'
 import contactItem from '@/components/ContactItem'
 import footerView from '@/components/FooterView'
+import offlineView from '@/components/OfflineView'
 
 export default {
   name: 'home',
@@ -49,18 +52,20 @@ export default {
     groupHeader,
     recordItem,
     contactItem,
-    footerView
+    footerView,
+    offlineView
   },
   data () {
     return {
       screenWidth: 0,
-      titleBtns: ['简介', '独立', '公司', '合作', '经历', '联系'],
+      titleBtns: ['简介', '独立', '公司', '合作', '下架', '经历', '联系'],
       userInfoDict: {},
       headerTitle1: '独立作品',
       headerTitle2: '公司产品',
       headerTitle3: '合作项目',
-      headerTitle4: '职业经历',
-      headerTitle5: '联系方式',
+      headerTitle4: '已下架应用',
+      headerTitle5: '职业经历',
+      headerTitle6: '联系方式',
       mremind: {},
       worktime: {},
       stenonote: {},
@@ -75,6 +80,7 @@ export default {
       koudaie: {},
       yinxin: {},
       lations: {},
+      offlineAppArray: [],
       recordArray: [],
       contactArray: []
     }
@@ -85,8 +91,8 @@ export default {
       title: '简介',
       array: [
         'MiaoXiaodong - 男，90后，居住北京，全职码农。目前职于创业公司，前端Leader，立志成为“全干工程师”',
-        '具备多年iOS开发经验，所有应用皆为独立开发。曾独立设计、开发过几款个人iOS/macOS应用。写过微信/支付宝小程序、跨平台应用、网站/系统前端。',
-        '前Objective-C骨灰级菜鸟，现Swift忠实拥趸。熟悉iOS/macOS开发，熟悉小程序，了解Vue，正在学习Flutter。'
+        '具备多年iOS开发经验，开发过20多款上架应用，绝大多数为独立开发。曾独立设计、开发过几款个人iOS/macOS应用。写过微信/支付宝小程序、跨平台应用、网站/系统前端。',
+        '前Objective-C骨灰级菜鸟，现Swift忠实拥趸。熟悉iOS/macOS开发，熟悉小程序，uni-app，了解Vue，正在学习Flutter。'
       ]
     }
     this.mremind = {
@@ -99,7 +105,7 @@ export default {
     }
     this.worktime = {
       image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/Collage_Fotor.jpg',
-      appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/seticonapp.png',
+      appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/paibaniconbig.png',
       appTitle: '排班 - 上班时间，一目了然',
       appInfo: '以日历为基础，记录上班时间的应用',
       appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/macappstoreimage.png',
@@ -201,6 +207,53 @@ export default {
       appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/macappstoreimage.png',
       downurl: 'https://apps.apple.com/cn/app/id1257364252'
     }
+    this.offlineAppArray = [
+      {
+        icon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/截屏2020-10-09 22.15.06.png',
+        title: '待着',
+        info: '生活的另一种可能'
+      },
+      {
+        icon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/logo.png',
+        title: 'INSPOS',
+        info: 'uni-app跨平台'
+      },
+      {
+        icon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/iTunesArtwork@2x.png',
+        title: '女王驾到',
+        info: '电商/iBeacon'
+      },
+      {
+        icon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/jiayouba.png',
+        title: '加油吧',
+        info: '地图/导航/支付/发票'
+      },
+      {
+        icon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/realpayappicon.png',
+        title: 'Real Pay',
+        info: '汉信码/支付/溯源'
+      },
+      {
+        icon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/hanxinhuitongicon.png',
+        title: '汉信汇通',
+        info: '汉信码/溯源'
+      },
+      {
+        icon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/hanxinmaapp.jpg',
+        title: '汉信二维码',
+        info: '汉信码生码解码'
+      },
+      {
+        icon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/qianbeiduo.png',
+        title: '钱呗多',
+        info: 'p2p/支付/银行'
+      },
+      {
+        icon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/Icon-76@3x.png',
+        title: '三汇易修',
+        info: '售后工单/支付'
+      }
+    ]
     this.recordArray = [
       {
         time: '2015年10月～至今',
@@ -213,7 +266,7 @@ export default {
         works: ['移动端技术负责人', 'iOS应用开发']
       },
       {
-        time: '2014年3月～2015年6月',
+        time: '2014年8月～2015年6月',
         company: '待着网 研发部 iOS工程师',
         works: ['iOS应用开发']
       }

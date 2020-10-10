@@ -129,7 +129,7 @@ export default {
     }
     this.inscounter = {
       image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201001-104509%402x.png',
-      appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/Icon-76%403x.png',
+      appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/incountappicon.png',
       appTitle: 'InsCounter',
       appInfo: 'InsCounter enables you to check and review your transactions anywhere',
       appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/macappstoreimage.png',

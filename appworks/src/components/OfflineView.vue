@@ -1,7 +1,7 @@
 <template>
   <div class="offlineView">
       <div :class="screenWidth>1000 ? 'offlineBgView':'phoneofflineBgView'">
-          <div class="appitemcss" v-for="(item, index) in appArray" :key="index">
+          <div :class="screenWidth>1000 ?'appitemcss':'phoneappitemcss'" v-for="(item, index) in appArray" :key="index">
             <img :class="screenWidth>1000 ? 'appicon':'phoneappicon'" :src="item.icon" alt="sdfa">
             <div :class="screenWidth>1000 ? 'titlecss':'phonetitlecss'">{{item.title}}</div>
             <div :class="screenWidth>1000 ? 'infocss':'phoneinfocss'">{{item.info}}</div>
@@ -56,6 +56,11 @@ export default {
 }
 .appitemcss {
     width: 140px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.phoneappitemcss {
+    width: 100px;
     text-align: center;
     margin-bottom: 30px;
 }

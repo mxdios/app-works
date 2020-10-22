@@ -12,6 +12,8 @@
 
 INSPOS
 
+INSMO
+
 INSPOS旧版：uniapp
 
 INSPOS闪票

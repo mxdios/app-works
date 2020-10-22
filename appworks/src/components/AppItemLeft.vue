@@ -20,6 +20,7 @@
             </Content>
             <Footer class="footer">
               <img class="appDown" :src="appItemLeftDict.appDownload" alt="" @click="downClick">
+              <img class="appDown" :src="appItemLeftDict.androidAppDownload" alt="" @click="androidDownClick">
             </Footer>
         </Layout>
     </Layout>
@@ -36,6 +37,7 @@
       {{appItemLeftDict.appInfo}}
     </div>
     <img class="phoneappDown" :src="appItemLeftDict.appDownload" alt="" @click="downClick">
+    <img class="phoneappDown" :src="appItemLeftDict.androidAppDownload" alt="" @click="androidDownClick">
   </div>
 </template>
 
@@ -62,6 +64,9 @@ export default {
   methods: {
     downClick () {
       window.open(this.appItemLeftDict.downurl, '_blank')
+    },
+    androidDownClick () {
+      window.open(this.appItemLeftDict.androidDownurl, '_blank')
     }
   }
 }
@@ -195,6 +200,6 @@ export default {
   cursor:pointer;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 </style>

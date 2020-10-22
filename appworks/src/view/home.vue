@@ -9,10 +9,11 @@
     <appItemRight :appItemLeftDict="stenonote" :screenWidth="screenWidth" />
     <groupHeader id="page2" :headerTitle="headerTitle2" :screenWidth="screenWidth" />
     <appItemLeft :appItemLeftDict="insposapp" :screenWidth="screenWidth" />
-    <appItemRight :appItemLeftDict="inscounter" :screenWidth="screenWidth" />
-    <appItemLeft :appItemLeftDict="paipaiaudit" :screenWidth="screenWidth" />
-    <appItemRight :appItemLeftDict="insposticket" :screenWidth="screenWidth" />
-    <appItemLeft :appItemLeftDict="haibao" :screenWidth="screenWidth" />
+    <appItemRight :appItemLeftDict="insmoapp" :screenWidth="screenWidth" />
+    <appItemLeft :appItemLeftDict="inscounter" :screenWidth="screenWidth" />
+    <appItemRight :appItemLeftDict="paipaiaudit" :screenWidth="screenWidth" />
+    <appItemLeft :appItemLeftDict="insposticket" :screenWidth="screenWidth" />
+    <appItemRight :appItemLeftDict="haibao" :screenWidth="screenWidth" />
     <groupHeader id="page3" :headerTitle="headerTitle3" :screenWidth="screenWidth" />
     <appItemRight :appItemLeftDict="dadamap" :screenWidth="screenWidth" />
     <appItemLeft :appItemLeftDict="watermark" :screenWidth="screenWidth" />
@@ -125,7 +126,19 @@ export default {
       appTitle: 'INSPOS',
       appInfo: '收银设备的智能管家应用',
       appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/macappstoreimage.png',
-      downurl: 'https://apps.apple.com/cn/app/inspos/id1472816651'
+      downurl: 'https://apps.apple.com/cn/app/inspos/id1472816651',
+      androidAppDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/googleplaydownicon.png',
+      androidDownurl: 'https://play.google.com/store/apps/details?id=inspos.mvp.android'
+    }
+    this.insmoapp = {
+      image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201022-163620.png',
+      appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/insmoicon512.jpg',
+      appTitle: 'INSMO',
+      appInfo: '日本自动贩卖机收银设备配置管理',
+      appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/macappstoreimage.png',
+      downurl: 'https://apps.apple.com/cn/app/insmo/id1536573247',
+      androidAppDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/googleplaydownicon.png',
+      androidDownurl: 'https://play.google.com/store/apps/details?id=cn.inspiry.insmo'
     }
     this.inscounter = {
       image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201001-104509%402x.png',

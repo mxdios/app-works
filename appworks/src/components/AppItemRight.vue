@@ -14,6 +14,7 @@
               </div>
             </Content>
             <Footer class="rightfooter">
+              <img class="rightappDown" :src="appItemLeftDict.androidAppDownload" alt="" @click="androidDownClick">
               <img class="rightappDown" :src="appItemLeftDict.appDownload" alt="" @click="downClick">
             </Footer>
         </Layout>
@@ -36,6 +37,7 @@
       {{appItemLeftDict.appInfo}}
     </div>
     <img class="phoneappDown" :src="appItemLeftDict.appDownload" alt="" @click="downClick">
+    <img class="phoneappDown" :src="appItemLeftDict.androidAppDownload" alt="" @click="androidDownClick">
   </div>
 </template>
 
@@ -62,6 +64,9 @@ export default {
   methods: {
     downClick () {
       window.open(this.appItemLeftDict.downurl, '_blank')
+    },
+    androidDownClick () {
+      window.open(this.appItemLeftDict.androidDownurl, '_blank')
     }
   }
 }
@@ -147,8 +152,9 @@ export default {
   text-align: right;
 }
 .rightappDown {
+    margin-left: 10%;
     height: 43px;
-  cursor:pointer;
+    cursor:pointer;
 }
 
 /* 手机 */
@@ -203,6 +209,6 @@ export default {
   cursor:pointer;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 </style>

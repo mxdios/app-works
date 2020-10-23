@@ -91,8 +91,8 @@ export default {
     this.userInfoDict = {
       title: '简介',
       array: [
-        'MiaoXiaodong - 男，90后，居住北京，全职码农。目前职于创业公司，前端Leader，立志成为“全干工程师”',
-        '具备多年iOS开发经验，开发过20多款上架应用，绝大多数为独立开发。曾独立设计、开发过几款个人iOS/macOS应用。写过微信/支付宝小程序、跨平台应用、网站/系统前端。',
+        'MiaoXiaodong - 男，90后，居住北京，全职码农。目前职于创业公司，任职前端Leader，iOS高级，前端/移动端技术负责人，立志成为“全干工程师”',
+        '具备多年iOS开发经验，开发过20多款上架应用。曾独立设计开发过几款个人iOS/macOS应用，稳居App Store效率排行榜。写过微信/支付宝小程序、跨平台应用、网站/系统前端。',
         '前Objective-C骨灰级菜鸟，现Swift忠实拥趸。熟悉iOS/macOS开发，熟悉小程序，uni-app，了解Vue，正在学习Flutter。'
       ]
     }
@@ -200,7 +200,7 @@ export default {
       image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201001-235804%402x.png',
       appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201001-235603%402x.png',
       appTitle: '口袋e',
-      appInfo: '访问办公内网的VPN工具（未上架国区）',
+      appInfo: '访问办公内网的VPN工具（未上架中国区）',
       appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/macappstoreimage.png',
       downurl: 'https://apps.apple.com/gb/app/id1473958090'
     }

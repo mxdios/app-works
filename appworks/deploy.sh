@@ -9,6 +9,9 @@ npm run build
 # 进入目标文件夹
 cd dist
 
+# 部署到自定義網域
+echo 'resume.markmiao.com' > CNAME
+
 # 提交到本地仓库
 git init
 git add -A

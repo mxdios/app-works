@@ -146,8 +146,6 @@ export default {
   text-align: right;
 }
 .rightfooter {
-    margin-left: 25%;
-  background-color: #f7f7f7;
   height: 40%;
   text-align: right;
 }

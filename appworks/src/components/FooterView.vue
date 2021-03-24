@@ -1,6 +1,6 @@
 <template>
   <div class="footerview">
-      Copyright © 2020 Mark Miao
+      Copyright © 2020 Mark Miao | Version: 1.1 (2021.03.24)
   </div>
 </template>
 

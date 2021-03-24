@@ -9,11 +9,11 @@
     <appItemRight :appItemLeftDict="stenonote" :screenWidth="screenWidth" />
     <groupHeader id="page2" :headerTitle="headerTitle2" :screenWidth="screenWidth" />
     <appItemLeft :appItemLeftDict="insposapp" :screenWidth="screenWidth" />
-    <appItemRight :appItemLeftDict="insmoapp" :screenWidth="screenWidth" />
-    <appItemLeft :appItemLeftDict="inscounter" :screenWidth="screenWidth" />
-    <appItemRight :appItemLeftDict="paipaiaudit" :screenWidth="screenWidth" />
-    <appItemLeft :appItemLeftDict="insposticket" :screenWidth="screenWidth" />
-    <appItemRight :appItemLeftDict="haibao" :screenWidth="screenWidth" />
+    <!-- <appItemRight :appItemLeftDict="insmoapp" :screenWidth="screenWidth" /> -->
+    <appItemRight :appItemLeftDict="inscounter" :screenWidth="screenWidth" />
+    <appItemLeft :appItemLeftDict="paipaiaudit" :screenWidth="screenWidth" />
+    <appItemRight :appItemLeftDict="insposticket" :screenWidth="screenWidth" />
+    <appItemLeft :appItemLeftDict="haibao" :screenWidth="screenWidth" />
     <groupHeader id="page3" :headerTitle="headerTitle3" :screenWidth="screenWidth" />
     <appItemRight :appItemLeftDict="dadamap" :screenWidth="screenWidth" />
     <appItemLeft :appItemLeftDict="watermark" :screenWidth="screenWidth" />
@@ -91,8 +91,8 @@ export default {
     this.userInfoDict = {
       title: '简介',
       array: [
-        'MiaoXiaodong - 男，90后，居住北京，全职码农。目前职于创业公司，任职前端Leader，iOS高级，前端/移动端技术负责人，立志成为“全干工程师”',
-        '具备多年iOS开发经验，开发过20多款上架应用。曾独立设计开发过几款个人iOS/macOS应用，稳居App Store效率排行榜。写过微信/支付宝小程序、跨平台应用、网站/系统前端。',
+        'MiaoXiaodong - 男，90后，居住北京。专业：软件工程，2014年毕业，全职码农。目前职于创业公司，任职前端Leader，iOS高级，前端/移动端技术负责人。',
+        '具备多年iOS开发经验，开发过20多款上架应用。曾独立设计开发过几款个人iOS/macOS应用，稳居App Store效率排行榜。写过微信/支付宝小程序、跨平台应用、网站/平台前端。',
         '前Objective-C骨灰级菜鸟，现Swift忠实拥趸。熟悉iOS/macOS开发，熟悉小程序，uni-app，了解Vue，正在学习Flutter。'
       ]
     }
@@ -122,13 +122,13 @@ export default {
     }
     this.insposapp = {
       image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201001-103736%402x.png',
-      appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/insposicon.png',
-      appTitle: 'INSPOS',
-      appInfo: '收银设备的智能管家应用',
+      appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/insmoicon512.jpg',
+      appTitle: 'INSMO',
+      appInfo: 'AIoT智能设备管控',
       appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/macappstoreimage.png',
       downurl: 'https://apps.apple.com/cn/app/inspos/id1472816651',
       androidAppDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/googleplaydownicon.png',
-      androidDownurl: 'https://play.google.com/store/apps/details?id=inspos.mvp.android'
+      androidDownurl: 'https://play.google.com/store/apps/details?id=com.pai.meng.inspos_flutter'
     }
     this.insmoapp = {
       image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201022-163620.png',
@@ -221,6 +221,11 @@ export default {
       downurl: 'https://apps.apple.com/cn/app/id1257364252'
     }
     this.offlineAppArray = [
+      {
+        icon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/insmoicon512.jpg',
+        title: 'INSMO-日本',
+        info: '日本自贩机设备管理'
+      },
       {
         icon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/截屏2020-10-09 22.15.06.png',
         title: '待着',

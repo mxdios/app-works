@@ -1,4 +1,8 @@
 {
+  "lations": {
+    "err": false,
+    "errmsg": "版本不支持"
+  },
     "hxsdk": {
         "err": false,
         "errmsg": "出现错误"

@@ -11,6 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "markdown-it-vue": "^1.1.6",
     "view-design": "^4.3.2",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"

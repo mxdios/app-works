@@ -14,8 +14,8 @@ export default new Router({
       component: Home
     },
     {
-      path: '/md',
-      name: 'md',
+      path: '/markdown',
+      name: 'markdown',
       component: Markdown
     }
   ]

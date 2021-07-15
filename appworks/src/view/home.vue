@@ -4,6 +4,7 @@
     <navBar :titleBtns="titleBtns" :screenWidth="screenWidth" />
     <userInfo id="page0" :userInfoDict="userInfoDict" :screenWidth="screenWidth" />
     <groupHeader id="page1" :headerTitle="headerTitle1" :screenWidth="screenWidth" />
+    <appItemLeft :appItemLeftDict="socketool" :screenWidth="screenWidth" />
     <appItemRight :appItemLeftDict="mremind" :screenWidth="screenWidth" />
     <appItemLeft :appItemLeftDict="worktime" :screenWidth="screenWidth" />
     <appItemRight :appItemLeftDict="stenonote" :screenWidth="screenWidth" />
@@ -67,6 +68,7 @@ export default {
       headerTitle4: '已下架应用',
       headerTitle5: '职业经历',
       headerTitle6: '联系方式',
+      socketool: {},
       mremind: {},
       worktime: {},
       stenonote: {},
@@ -93,8 +95,16 @@ export default {
       array: [
         'MiaoXiaodong - 男，90后，居住北京。专业：软件工程，2014年毕业，全职码农。目前职于创业公司，任职前端Leader，iOS高级，前端/移动端技术负责人。',
         '具备多年iOS开发经验，开发过20多款上架应用。曾独立设计开发过几款个人iOS/macOS应用，稳居App Store效率排行榜。写过微信/支付宝小程序、跨平台应用、网站/平台前端。',
-        '前Objective-C骨灰级菜鸟，现Swift忠实拥趸。熟悉iOS/macOS开发，熟悉小程序，uni-app，了解Vue，正在学习Flutter。'
+        '技术栈：iOS/macOS：Swift、OC；移动端/跨平台：小程序、Flutter、uni-app，前端：Vue、js等'
       ]
+    }
+    this.socketool = {
+      image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/socketoolimage.png',
+      appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/stcoetoolicon.png',
+      appTitle: 'SockeTool - 能传文件的Socket工具',
+      appInfo: 'Socket调试工具，支持大文件传输',
+      appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/badge-download-on-the-mac-app-store_s.png',
+      downurl: 'https://apps.apple.com/cn/app/id1576144037?mt=12'
     }
     this.mremind = {
       image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/mremindappstore.png',
@@ -216,7 +226,7 @@ export default {
       image: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201002-000920%402x.png',
       appIcon: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/WX20201002-000843%402x.png',
       appTitle: 'Lations',
-      appInfo: 'Lations智能中控系统（仅支持iPad）',
+      appInfo: 'Lations智能中控系统，TCP/UDP',
       appDownload: 'https://imagedb-1257991841.cos.ap-beijing.myqcloud.com/macappstoreimage.png',
       downurl: 'https://apps.apple.com/cn/app/id1257364252'
     }
